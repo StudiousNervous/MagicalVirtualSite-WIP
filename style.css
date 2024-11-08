@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur265.cur), auto !important;
+}
+@font-face {
+    font-family: 'Pixel Icons Compilation';
+    src: url(Polices_site/Pixel\ Icons\ Compilation.ttf);
+}
+body{
+    background-image:
+    url(Images_site/sakura_tile.gif);
+}
+header{
+    background-color: #FE74B0;
+    padding-bottom: 0.1%;
+}
+#logo_big{
+    display: flex;
+    justify-content: center;
+    flex-basis: content;
+}
+.interface_text, .menu_side{
+    font-family: "Akaya Kanadaka", system-ui;
+}
+.navig{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: larger;
+    border: 2px solid #FF4D98;
+}
+.navig_options{
+    display: flex;
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 0.5%;
+    color: #FCF7FE;
+    vertical-align: middle;
+    
+}
+.navig_options:hover{
+    color: #FDF7D6;
+    cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat983.cur), auto !important;
+}
+.separation{
+    font-family: Pixel Icons Compilation;
+    padding-top: 0.1em;
+    /* padding-bottom: 0.5%; */
+    color: #FF4D98;
+    padding-bottom: 0.2em;
+    vertical-align: text-top;
+    font-size: 95%;
+}
+.separation:hover{
+    padding-top: 0em;
+}
+
+.Container {
+    display: grid; 
+    /* grid-template-columns: 0.5fr 0fr 1fr;  */
+    /* grid-template-rows: 0fr 0fr 1fr;  */
+    grid-template-columns: 20% 79%;
+    gap: 0px 0.8%; 
+    grid-template-areas: 
+      /* ". . ."
+      ". . ." */
+      "Menu .                 card_showcase"; 
+  }
+.Menu{
+    background-color: #FF86B9;
+    height: 100vh;
+}
+  .image_menu img{
+    width: 100%;
+    width: 100%;
+}
+
+ul.side_options{
+    margin-left: 10%;
+    list-style-image: url(/Images_site/heartfelt.gif);
+    list-style-position: outside;
+}
+
+.side_menu{
+    display: flex;
+    justify-content:space-between;
+    margin-left: 5%;
+}
+
+.menu_side ul{
+    background-color: #FE74B0;
+    color: #FCF7FE;
+}
+
+  .titre_showcase{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin: 1vw;
+    text-align: center;
+    background-color: #FCF7FE;
+    color: #9D2763;
+    text-decoration: underline;
+    text-decoration-color: #FF86B9;
+    font-size: 2.5ch;
+}
+
+.card_showcase {
+    display: grid; 
+    grid-template-columns: 24% 24% 24% 24%; 
+    /* grid-template-rows: 5vh 50vh 45vh; */
+    grid-template-rows: 8% 45ch 44ch;
+    gap: 1px 1px 0px; 
+    grid-template-areas: 
+      "titre_showcase"
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8"; 
+      /* grid-area:                 card_showcase; */
+      background-color: #FCAFD9;
+      width: 100%;
+      height: 98vh;
+      justify-items: stretch;
+      margin-top: 1vh;
+      margin-bottom: 1vh;
+      align-content: space-between;
+      /* justify-content: space-between; */
+      justify-content: center;
+      
+  }
+
+  .card_showcase div{
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.card:hover{
+    background-image: url(Images_site/glitter_snow.gif);
+}
+.card img{
+    height: 45%;
+    border: 2.75px solid #FCF7FE;
+}
+.card img:hover{
+    cursor: url(https://cur.cursors-4u.net/smilies/smi-1/smi58.cur), auto !important;
+}
+
+/* p{
+
+} */
+
+.bas_text{
+    display: flex;
+    justify-content: space-around;
+    background-color: #FCF7FE;
+    padding-bottom: 0.5vh;
+    vertical-align: bottom;
+}
+.bas_text:hover{
+    background-image: url(Images_site/glitter_snow.gif);
+}
+.bas_options{
+    color: #FEC6DB;
+}
+.bas_options:hover{
+    color: #FF86B9;
+    cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat983.cur), auto !important;
+}
