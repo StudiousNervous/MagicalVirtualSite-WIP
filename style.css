@@ -2,10 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-:root{
+    text-decoration:none;
     cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur265.cur), auto !important;
 }
+
 @font-face {
     font-family: 'Pixel Icons Compilation';
     src: url(Polices_site/Pixel\ Icons\ Compilation.ttf);
@@ -23,7 +23,7 @@ header{
     justify-content: center;
     flex-basis: content;
 }
-.interface_text, .menu_side{
+.interface_text, .menu_side , .info_card{
     font-family: "Akaya Kanadaka", system-ui;
 }
 .navig{
@@ -63,22 +63,19 @@ header{
 
 .Container {
     display: grid; 
-    /* grid-template-columns: 0.5fr 0fr 1fr;  */
-    /* grid-template-rows: 0fr 0fr 1fr;  */
     grid-template-columns: 20% 79%;
     gap: 0px 0.8%; 
-    grid-template-areas: 
-      /* ". . ."
-      ". . ." */
-      "Menu .                 card_showcase"; 
   }
 .Menu{
     background-color: #FF86B9;
     height: 100vh;
+    
 }
   .image_menu img{
     width: 100%;
-    width: 100%;
+}
+.side_options{
+    padding-bottom: 10%;
 }
 
 ul.side_options{
@@ -92,13 +89,27 @@ ul.side_options{
     justify-content:space-between;
     margin-left: 5%;
 }
-
-.menu_side ul{
-    background-color: #FE74B0;
-    color: #FCF7FE;
+.menu_titles{
+    font-size: larger;
+    color: #FAEDFC;
+    text-decoration: underline;
 }
 
-  .titre_showcase{
+.menu_side ul{
+    color: #FCF7FE;
+    text-align: justify;
+    font-size: medium;
+}
+.menu_side li{
+    margin-bottom: 2%;
+}
+
+.menu_side li:hover{
+    background-color: #FE74B0;
+    cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat983.cur), auto !important;
+}
+
+.titre_showcase{
     grid-column-start: 1;
     grid-column-end: 5;
     margin: 1vw;
@@ -113,22 +124,20 @@ ul.side_options{
 .card_showcase {
     display: grid; 
     grid-template-columns: 24% 24% 24% 24%; 
-    /* grid-template-rows: 5vh 50vh 45vh; */
     grid-template-rows: 8% 45ch 44ch;
     gap: 1px 1px 0px; 
-    grid-template-areas: 
+    /* grid-template-areas: 
       "titre_showcase"
       "card1 card2 card3 card4"
       "card5 card6 card7 card8"; 
-      /* grid-area:                 card_showcase; */
+      grid-area:                 card_showcase; */
       background-color: #FCAFD9;
       width: 100%;
       height: 98vh;
-      justify-items: stretch;
+      /* justify-items:stretch; */
       margin-top: 1vh;
       margin-bottom: 1vh;
       align-content: space-between;
-      /* justify-content: space-between; */
       justify-content: center;
       
   }
@@ -137,21 +146,24 @@ ul.side_options{
     font-family: "Delius", serif;
     font-weight: 400;
     font-style: normal;
+    
   }
+
+.card div{
+    vertical-align: middle;
+    text-align: center;
+    height: 50%;
+}
 .card:hover{
     background-image: url(Images_site/glitter_snow.gif);
 }
 .card img{
-    height: 45%;
+    height: 60%;
     border: 2.75px solid #FCF7FE;
 }
 .card img:hover{
     cursor: url(https://cur.cursors-4u.net/smilies/smi-1/smi58.cur), auto !important;
 }
-
-/* p{
-
-} */
 
 .bas_text{
     display: flex;
@@ -170,3 +182,124 @@ ul.side_options{
     color: #FF86B9;
     cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat983.cur), auto !important;
 }
+
+@media only screen and(max-width: 320px){
+    /* .image_menu img{
+        max-width: 320px;
+    }
+    .card_showcase{
+        max-width: 320px;
+    } */
+    /* .card_showcase{
+        max-width: 320px;
+    } */
+    *{
+        max-width: 320px;
+        overflow: auto;
+        padding: 0;
+        margin: 0;
+    }
+    header{
+        width: 100vmax !important;
+    }
+    .navig{
+        font-size: 20px;
+        padding: 0 !important;
+    }
+    .navig_options{
+        padding: 0 !important;
+    }
+    .separation{
+        font-size: 0.5rem;
+        padding: 0 !important;
+    }
+    .side_menu {
+        display: grid;
+        max-width: 100vh; 
+        grid-template-columns: 10% 90%;
+        gap: 0 0; 
+    }
+    .card_showcase{
+        grid-template-columns: 14% 14%; 
+        grid-template-rows: 2% 24% 24% 24% 24%;
+        gap: 1px 1px;
+        margin: none;
+    }
+    .titre_showcase{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin: 1%;
+    }
+    .card div{
+        justify-content: center;
+    }
+    .card img{
+        height: 20%;
+    }
+
+}/*Rien ne marche comme prévu...
+   Et je ne sais même pas pourquoi ! Splendid ! 
+   Hoping to be &#9904 soon */
+
+/* Page 2 only : */
+.Corps {
+    display: grid; 
+    grid-template-columns: 35vw 55vw; 
+    grid-template-rows: 98vh; 
+    gap: 0px 0px; 
+    justify-items: stretch;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 0.8%;
+    margin-right: 0.8%;
+    max-width: 97vw;
+    grid-template-areas: 
+      "card info_card"; 
+      background-color: #FCAFD9;
+      background-image: url(Images_site/pink_shrooms.gif);
+  }
+#card7-BIG {
+    /* grid-area: card; */
+    height: 80%;
+    vertical-align: middle;
+    padding: 2%;
+}
+.info_card {
+    display: grid; 
+    grid-template-columns: 90%; 
+    grid-template-rows: 10% 90%; 
+    gap: 0px 0px; 
+    
+    /* grid-template-areas: 
+        "card_name"
+        "card_bio"; 
+    grid-area: info_card;  */
+}
+.card_name {
+    /* grid-area: card_name;  */
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 2%;
+    font-size: 200%;
+    background-color: #FF86B9;
+    color: #FAEDFC;
+    text-decoration: underline;
+}
+.card_bio {
+    /* grid-area: card_bio; */
+    color: #FFFCDF;
+    font-size: 190%;
+    text-align: justify;
+    background-color: #FCAFD9;
+    height: 80%;
+}
+.rating{
+    text-align: center;
+    font-size: 0.9em;
+    color: #FAEDFC;
+}
+span.stars{
+    color: #FCF7FE;
+}
+/* Uuuuuuuuuuuuuuuuuuuuuugh */
